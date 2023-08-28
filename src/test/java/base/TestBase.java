@@ -20,11 +20,11 @@ public class TestBase extends AbstractTestNGCucumberTests {
         driver.navigate().to("https://demo.nopcommerce.com/");
     }
 
-    @AfterTest
-    public void quitBrowser()
-    {
-        driver.quit();
-    }
+//    @AfterTest
+//    public void quitBrowser()
+//    {
+//        driver.quit();
+//    }
 
 
 }
