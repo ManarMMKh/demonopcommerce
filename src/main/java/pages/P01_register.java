@@ -21,6 +21,7 @@ public class P01_register extends PageBase{
     By registerButton = By.id("register-button");
     By assertRegisterSuccessMessage = By.xpath("//div[@class='result']");
 
+
     public P01_register(WebDriver driver) {
         super(driver);
     }

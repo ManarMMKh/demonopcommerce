@@ -32,6 +32,7 @@ public class P03_homePage extends PageBase{
     By successMessageBackgroundColor = By.cssSelector("div.bar-notification");
     By wishListTab = By.linkText("Wishlist");
     By wishListQtyItem = By.cssSelector("input.qty-input");
+    By euroItems = By.cssSelector("span.price.actual-price");
 
 
     public void selectEuroCurrency()
@@ -40,6 +41,19 @@ public class P03_homePage extends PageBase{
         euroSign.selectByIndex(1);
 
     }
+    public void assertThatEuroSymbolIsDisplayed()
+    {
+        int size = new ArrayList<>(driver.findElements(euroItems)).size();
+        for(int i=0; i<size; i++)
+        {
+            String euroSign = driver.findElements(euroItems).get(i).getText();
+            Assert.assertTrue(euroSign.contains("€"));
+            System.out.println(euroSign);
+        }
+
+
+    }
+
     public void clickOnFirstSlider()
     {
         clickOnElement(firstSlider);

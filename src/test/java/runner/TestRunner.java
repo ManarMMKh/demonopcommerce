@@ -6,7 +6,7 @@ import io.cucumber.testng.CucumberOptions;
 @CucumberOptions(
         features = "src/test/resources/features" ,
         glue = "steps" ,
-        tags = "@scenario11"
+        tags = "@scenario12"
 )
 
 public class TestRunner extends TestBase {
